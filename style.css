@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  width:1500px;
+  height:100%;
+}
+
+.concept {
+  position: absolute;
+  padding: 5px 10px; 
+/*  padding: 0.2em 0.5em; */
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+#container {
+  background-color: #eee;
+}
+
+#inputForm {
+  position: fixed;
+  right: 0;
+}
+
+#concepts {
+  width: 100%;
+  border: 1px solid #999;
+}
+
+.relation {
+  position: absolute;
+/*  background-color: #ddd;*/
+  opacity: 0.8;
+  padding: 2px 5px;
+  font-size: 0.6em;
+}
+
+.red{
+    background-color:#fcc;
+}
+
+.green{
+    background-color:#cfc;
+}
