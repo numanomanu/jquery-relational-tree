@@ -24,23 +24,5 @@ Ludwig Josef Johann Wittgenstein "notable works" Philosophical Investigations (1
 <script type="text/javascript" src="jquery.conceptmap.js"></script>
 <script type="text/javascript" src="textareaLoader.js"></script>
 <script type="text/javascript">
-$(function() {
-  $("#container").conceptMap({'tripleLoader': {func: textareaLoadEngine, args: {}}});
-});
-
-$(function(){
-
-var str_work="";
-
-$.getJSON("http://macrocro.com/forward/api", function(json){
-for(var i in json){
-    //test.jsonファイルから取得した情報を連結
-    str_work=str_work+json[i].id+","+json[i].name+","+json[i].birthday+"&lt;br&gt;";
-}
-});
-//alert(str_work);
-//document.write(str_work);
-});
-
 </script>
 </html>
