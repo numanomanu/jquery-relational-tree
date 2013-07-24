@@ -423,12 +423,8 @@ var obj = {
 	 for (var i=0; i<tl; i++){
              //triples[i]に親と子のつながりが入っている。
 	   var triple = triples[i];
-          // alert(vardump(triple.concept1));
-//           triple.concept1 = triple.concept1 + '<img src="sample2.png" width=40 height=40;>';
 	  //addTripleすると関係性とconcept1,relation,concept2が全部帰ってくる 
            　var relation = this.addTriple(triple);
-//           relation.to.title = relation.to.title +  '<img src="sample2.png" width=40 height=40;>';
-          //alert(vardump(triples));
 	   relation.keep = true;
 	   relation.to.keep = true;
 	   relation.from.keep = true;
