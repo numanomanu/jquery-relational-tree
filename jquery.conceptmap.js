@@ -154,9 +154,10 @@
       //concept[x][4] : picuterを新しい引数を作っていれる。
       var global_i = 0;
     function createConcept(title, x, y,triple) {
+        
             if (global_i ==0){
                 var html = $("<div class='concept red'><a href='http://macrocro.com/forward/home/index'><img src='" + triple.image + "'width=40 height=40;></a>" + triple.comment + "</div>");
-            }else if(global_i == triple.length){
+            }else if(global_i == triple.length-1){
                 var html = $("<div class='concept green'><a href='http://macrocro.com/forward/home/index'><img src='" + triple.image + "'width=40 height=40;></a>" + triple.comment + "</div>");
             }else{
                 var html = $("<div class='concept'><a href='http://macrocro.com/forward/home/index'><img src='" + triple.image + "'width=40 height=40;></a>" + triple.comment + "</div>");
@@ -420,6 +421,7 @@ var obj = {
 //	 console.log(opts.tripleLoader);
 	 var triples = opts.tripleLoader.func(this, opts.tripleLoader.args);
 	 var tl = triples.length;
+         alert(triples.length);
 	 for (var i=0; i<tl; i++){
              //triples[i]に親と子のつながりが入っている。
 	   var triple = triples[i];

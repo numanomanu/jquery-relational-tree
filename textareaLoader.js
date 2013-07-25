@@ -1,30 +1,31 @@
 
 
-function textareaLoadEngine(conceptMap, options){
+function textareaLoadEngine(){
     var triples = new Array();
-
+    //本番用はこちら
+//    var url = "http://macrocro.com/forward/api";
+    //↓はとりあえずjson読み込むサンプル
+    var url = "./kurochan.json";
+    
+    //まずはブラウザに対応したリクエストをクリエイト！
     var httpObj = XMLHttpRequestCreate();
-    httpObj.open("get", "./kurochan.json", false);
+    httpObj.open("get", url, false);//同期通信（処理が終わるまでユーザを待たせる）
 
-//    httpObj.onreadystatechange = function(){
-//        if(httpObj.readyState == 4){
- httpObj.onload = function(){
+    httpObj.onload = function(){
     var myData = JSON.parse(httpObj.responseText);
-             //triplesの中に連想配列を代入する
-            for(var i=0; i<myData.length; i++){
-                triples[i] = new Object();
-                triples[i]['concept1']   = myData[i].id;
-                triples[i]['concept2']   = myData[i].prev_id;
-                triples[i]['comment']    = myData[i].comment;
-                triples[i]['name']       = myData[i].user.name;
-                triples[i]['image']      = myData[i].user.image_path;
-                triples[i]['relation']   = ' ';
-            }
-       
+        for(var i=0; i<myData.length; i++){ //triplesの中に連想配列を代入
+            triples[i] = new Object();
+            triples[i]['concept1']   = myData[i].id;
+            triples[i]['concept2']   = myData[i].prev_id;
+            triples[i]['comment']    = myData[i].comment;
+            triples[i]['name']       = myData[i].user.name;
+            triples[i]['image']      = myData[i].user.image_path;
+            triples[i]['relation']   = ' ';
+        }
     }
     httpObj.send(null);
     
-    if(triples){
+    if(triples){//triplesにデータが入っていればリターン。
         return triples;    
     }else{
         alert('データ取得中');    
@@ -48,16 +49,6 @@ function XMLHttpRequestCreate(){
 
 	return null;
 }
-//setInterval(textareaLoadEngine(), 50);    
-
-/*
-httpObj = new XMLHttpRequest();
-httpObj.open("get", "http://macrocro.com/forward/api", true);
-httpObj.onload = function(){
-   // var myData = JSON.parse(this.responseText);
-   var myData =this.responseText;
-alert(myData);
-}*/
 
  /*
   * debug用　vardump
