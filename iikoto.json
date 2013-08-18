@@ -1,0 +1,48 @@
+[
+
+    {
+        "id": 1,
+        "prevId": null,
+        "comment": "とろろをご飯にかけてもらった",
+        "xGeo": 35.1315,
+        "yGeo": 138.939,
+        "createdAt": "2013-08-10T16:56:45.000Z",
+        "userId": 1,
+        "name": "macrocro",
+        "imagePath": "http://a0.twimg.com/profile_images/2164966150/daitsubu_normal.jpg"
+    },
+    {
+        "id": 8,
+        "prevId": null,
+        "comment": "席を譲ってもらった",
+        "xGeo": 35.6589,
+        "yGeo": 139.778,
+        "createdAt": "2013-08-10T18:16:42.000Z",
+        "userId": 3,
+        "name": "numanomanu",
+        "imagePath": "http://a0.twimg.com/profile_images/3153353513/f09131610e6c3cb6f8eba3a85e65ef94_normal.jpeg"
+    },
+    {
+        "id": 10,
+        "prevId": null,
+        "comment": "お手伝いしてもらった",
+        "xGeo": 34.7632,
+        "yGeo": 135.054,
+        "createdAt": "2013-08-12T19:38:12.000Z",
+        "userId": 3,
+        "name": "numanomanu",
+        "imagePath": "http://a0.twimg.com/profile_images/378800000103839389/78524d4ad17e0b4506e2e71b6fa40136_normal.jpeg"
+    },
+    {
+        "id": 11,
+        "prevId": null,
+        "comment": "車で送ってもらった",
+        "xGeo": 36.4446,
+        "yGeo": 136.595,
+        "createdAt": "2013-08-18T21:23:45.000Z",
+        "userId": 3,
+        "name": "numanomanu",
+        "imagePath": "http://a0.twimg.com/profile_images/378800000127475566/45089d5f80eeae722b5f611fe1acf5e9_normal.png"
+    }
+
+]

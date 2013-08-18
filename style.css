@@ -1,23 +1,122 @@
+/*-------------------
+    allsetting
+-------------------*/
+a{text-decoration:none;}
+li{list-style: none}
+
 body {
-  margin: 0;
-  padding: 0;
-  width:1500px;
-  height:100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    height:100%;
 }
-
-.concept {
-  position: absolute;
-  padding: 5px 10px; 
-/*  padding: 0.2em 0.5em; */
-  border: 1px solid #ccc; 
-  border-radius: 5px;
-  font-size: 0.8em;
-}
-
 #container {
-  background-color: #eee;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    width:100%;
+/*    
+*/}
+#top{
+ height:50px;
+ width:1000px;
+ margin: 10px auto 10px;
+ text-align: right;
+ border-bottom: 3px solid #ccc;
+ padding: 0 0 10px;
+}
+#top li{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}
+#top a:hover{
+border-bottom: 5px solid #ffc;    
+}
+#top .logo{
+position: absolute;
+left:15%;
 }
 
+#Imgtop{
+    width:1000px;
+    height:626px;
+    margin: 0 auto;
+    background-image: url('image/top06.png');
+}
+#Imgtop img{
+margin-top:100px;
+}
+
+
+#user_nav{
+margin: 10px;    
+}
+#login p{
+    color:#999999;
+}
+
+
+#RelayBand{
+    background:url('image/line.png') repeat-y scroll center top transparent;
+    margin: 10px 0;
+    height: 3000px;
+}
+#BAND{
+    display: none;
+    position: fixed;
+    margin: 0 auto;
+    top:200px;
+    left:45%;
+    z-index: 100;
+}
+#app ul{
+    margin: 0;
+    padding:0;
+}
+#app li{
+    margin: 20px 0;
+}
+.appLeft{
+    text-align: left;
+    padding-left:5%;
+    z-index: 1;
+}
+.appRight{
+    text-align: right;
+    padding-right:5%;
+    right: 20%;
+    z-index: 1;
+}
+
+
+
+footer{
+    background-color:#ffc;
+    height: 500px;
+}
+
+#message{
+    padding: 10px;
+    text-align: left;
+}
+#message p{
+ margin: 10px 100px;
+    color:#999999;
+}
+#footnote li{
+    margin: 10px 30px;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+/*リレーションシップ*/
 #inputForm {
   position: fixed;
   right: 0;
@@ -34,6 +133,14 @@ body {
   opacity: 0.8;
   padding: 2px 5px;
   font-size: 0.6em;
+}
+.concept {
+  position: absolute;
+  padding: 5px 10px; 
+/*  padding: 0.2em 0.5em; */
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 0.8em;
 }
 
 .red{
