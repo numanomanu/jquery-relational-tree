@@ -1,37 +1,58 @@
-var httpObj = new XMLHttpRequest();
+var httpObj = XMLHttpRequestCreate();
 httpObj.open("get", "./kurochan.json", true);
 //httpObj.open("get", "http://numanomanu.sakura.ne.jp/json.txt", true);
 httpObj.onload = function(){
-var myData = JSON.parse(this.responseText);
-var txt = "";
-var concept = new Array(myData.length);
-for (var i=0;i<myData.length;i++){
-    concept[i] = new Array(5);
-    concept[i][0] = myData[i].id;
-    concept[i][1] = myData[i].prev_id;
-    concept[i][2] = myData[i].comment;
-    concept[i][3] = myData[i].user.name;
-    concept[i][4] = myData[i].user.image_path;
-}
-for(var i=0; i<concept.length; i++){
-    alert(
-    concept[i][0] +
-    concept[i][1] +
-    concept[i][2] +
-    concept[i][3] +
-    concept[i][4])
-}
+    var myData = JSON.parse(this.responseText);
+    var txt = "";
+    var concept = new Array(myData.length);
+    for (var i=0;i<myData.length;i++){
+        concept[i] = new Array(5);
+        concept[i][0] = myData[i].id;
+        concept[i][1] = myData[i].prev_id;
+        concept[i][2] = myData[i].comment;
+        concept[i][3] = myData[i].user.name;
+        concept[i][4] = myData[i].user.image_path;
+    }
+/*
+    for(var i=0; i<concept.length; i++){
+        alert(
+        concept[i][0] +
+        concept[i][1] +
+        concept[i][2] +
+        concept[i][3] +
+        concept[i][4])
+    }
+*/
+    for (var i=0; i<myData.length; i++){
+    txt = txt + myData[i].id + "コメント" + myData[i].comment + "　" + myData[i].prev_id + " " + "name" + myData[i].user.name + "<img src="+ myData[i].user.image_path + "> <br>";
+    }
 
-for (var i=0; i<myData.length; i++){
-txt = txt + myData[i].id + "コメント" + myData[i].comment + "　" + myData[i].prev_id + " " + "name" + myData[i].user.name + "<img src="+ myData[i].user.image_path + "> <br>";
-}
-
-document.getElementById("result").innerHTML = txt;
+    document.getElementById("result").innerHTML = txt;
+    
 }
 httpObj.send(null);
 
 
- 
+// ------------------------------------------------------------
+// XMLHttpRequest オブジェクトを作成する関数
+// ------------------------------------------------------------
+function XMLHttpRequestCreate(){
+	try{
+		return new XMLHttpRequest();
+	}catch(e){}
+	try{
+		return new ActiveXObject('MSXML2.XMLHTTP.6.0');
+	}catch(e){}
+	try{
+		return new ActiveXObject('MSXML2.XMLHTTP.3.0');
+	}catch(e){}
+	try{
+		return new ActiveXObject('MSXML2.XMLHTTP');
+	}catch(e){}
+
+	return null;
+}
+
  function vardump(arr,lv,key) {
     var dumptxt = "",
         lv_idt = "",
